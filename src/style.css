@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  *::before {
+    box-sizing: border-box;
+  }
+  
+  #html {
+    word-break: break-all;
+  }
+
+  #shape {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%); /*居中显示*/
+    top: 20px;
+  }
+  #shape::before {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+#shape::after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+@media (max-width: 500px) {
+    #html {
+      height: 50vh; /*默认低于500是手机*/
+      overflow: auto;
+    }
+  
+    #divWrapper { 
+      height: 50vh;
+    }
+  
+    #shape {
+      position: relative; 
+      top: 0;
+      right: 0;
+    }
+  }
